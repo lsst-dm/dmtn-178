@@ -1,7 +1,3 @@
-# List acronyms in this file that are not found in lsst-texmf, or that have multiple definitions (put the one you want here).
-#
-# Line format:
-#   ACRONYM:Definition
-#
-# Example:
-#   MIA:Missing In Action
+#Put acronyms in this file which are not found or which have multiple definitions (putt he one you want here)
+VE:Verification Element
+PSE:Project System Engineering
