@@ -305,5 +305,5 @@ In addition, Jenkins DSL scripts use the \texttt{rubinobs-dm-admin} credential-I
 The \texttt{docs-ci} Jenkins application is hosted on NCSA Kubernetes cluster. The deployment files are available at
 \url{https://github.com/docs-ci/docs-ci-kubektl}.
 
-The documents continuous generation is implemented in the \texttt{docugen} worker, that deploy a \texttt{docsci/docugen-worker} docker image.
-This docker image is defined in \url{https://github.com/docs-ci/docs-ci-workers-docker} repository, \texttt{docs} folder.
+Continuous generation of documents is implemented by the \texttt{docugen} worker service, which is deployed as a \texttt{docsci/docugen-worker} docker image.
+This docker image is defined in the \url{https://github.com/docs-ci/docs-ci-workers-docker} repository in the \texttt{docs} folder.
