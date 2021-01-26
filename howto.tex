@@ -296,3 +296,14 @@ managed by the DM Architecture team.
 Two generic set of credentials to access the Jira REST API and the Jira database have been defined.
 These credentials are available at \texttt{1password.com}, in the LSST-IT architecture vault, but not yet integrated into docsteady.
 In order to use these credentials, they have to be configured using environment variables, added as options from the command line, or entered when prompted, as specified in this technical note.
+
+In addition, Jenkins DSL scripts use the \texttt{rubinobs-dm-admin} credential-ID defined in the \textit{Manage Credentials} Jenkins section.
+
+
+\subsection{Deployment of New Versions}\label{sec:deploy}
+
+The \texttt{docs-ci} Jenkins application is hosted on NCSA Kubernetes cluster. The deployment files are available at
+\url{https://github.com/docs-ci/docs-ci-kubektl}.
+
+Continuous generation of documents is implemented by the \texttt{docugen} worker service, which is deployed as a \texttt{docsci/docugen-worker} docker image.
+This docker image is defined in the \url{https://github.com/docs-ci/docs-ci-workers-docker} repository in the \texttt{docs} folder.
