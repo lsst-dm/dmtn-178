@@ -4,6 +4,8 @@
 This is intended to be a short guide to the installation and use of docsteady.
 See \citeds{DMTN-140} for a high level overview of the process and the logic implemented here.
 
+This documents it superceded by \url{docsteady.lsst.io}
+
 
 \section{Installation}\label{sec:install}
 
@@ -34,7 +36,7 @@ It is recommended to provide credentials by setting up the following environment
 otherwise, it is required to specify them from the command line using the \texttt{--username} and \texttt{--password} options.
 In case credential options are omitted and no environment variables are defined, username and password will be prompted interactively.
 
-Personal Jira credentials can be used. 
+Personal Jira credentials can be used.
 For CI purposes, a general set of credentials are available, as specified in section \ref{sec:auth}.
 
 In order to execute any of the docsteady commands described in the following subsections, a conda environment providing docsteady shall be activated, as described in section \ref{sec:install}.
@@ -63,7 +65,7 @@ Note that:
 \begin{itemize}
 \item the output file \textit{jira\_docugen.tex} is optional in the execution of docsteady but required in this context in order to include the extracted information in a \LaTeX~document (i.e. LDM-639.tex). If omitted, the docsteady output will just be printed in the terminal;
 \item the folder name in Jira includes at the end the test specification document handle. This is a best practice to use when organizing test cases in Jira since it helps to orient the user in the folder structure;
-\item an appendix with the traceability to the requirements is produced in the file \textit{jira\_docugen.appendix.tex}, to be included in the test specification TeX file. 
+\item an appendix with the traceability to the requirements is produced in the file \textit{jira\_docugen.appendix.tex}, to be included in the test specification TeX file.
 \end{itemize}
 
 See LDM-639 Git repository as an example.
@@ -137,7 +139,7 @@ The parameter \texttt{CMP} shall correspond to the Rubin Observatory sub-systems
 See subsection \ref{sec:components} for the complete list of components.
 If omitted, the DM component is selected by default.
 
-The \texttt{--subcomponent <SUBC>} is optional. If omitted all verification elements of the specified component will be extracted. 
+The \texttt{--subcomponent <SUBC>} is optional. If omitted all verification elements of the specified component will be extracted.
 See \ref{sec:subcomp} for the description of the DM subcomponents.
 
 If the option \texttt{--details true} is provided, an extra technical note is generated, including all test case details.
@@ -147,7 +149,7 @@ See LDM-732 Git repository as an example.
 
 \subsubsection{Sub-Components}\label{sec:subcomp}
 
-Ideally, Sub-Components are matched to the major products of a LSST/Rubin subsystem. 
+Ideally, Sub-Components are matched to the major products of a LSST/Rubin subsystem.
 They should also be mapped to the product tree defined in the MagicDraw model.
 
 In DM, trying to find a good balance between details and practice, the following components have been defined, in agreement with the DM scientist leader:
@@ -194,7 +196,7 @@ When no \texttt{--namespace if provided}, the DM component is selected by defaul
 The generated file \textbf{jira\_docugen.tex} is meant to be included in LDM-692.tex.
 
 In case you want to generate the VCD for a different LSST/Rubin Observatory subsystem,
-just use the corresponding subsystem code configured in the Jira \textbf{component} field. 
+just use the corresponding subsystem code configured in the Jira \textbf{component} field.
 See next subsection \ref{sec:components} for the complete list.
 
 
@@ -290,7 +292,7 @@ will detect the changes in the YAML configuration file and create/update the the
 
 \subsection{Authentication}\label{sec:auth}
 
-The access to \url{https://lsst-docs-ci.ncsa.illinois.edu/jenkins} is granted adding users to the \textbf{docs-ci} GitHub organization, 
+The access to \url{https://lsst-docs-ci.ncsa.illinois.edu/jenkins} is granted adding users to the \textbf{docs-ci} GitHub organization,
 managed by the DM Architecture team.
 
 Two generic set of credentials to access the Jira REST API and the Jira database have been defined.
